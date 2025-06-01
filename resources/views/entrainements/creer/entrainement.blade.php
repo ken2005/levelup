@@ -6,7 +6,7 @@
 
 <form id="mainForm" action="{{route('doModifierEntrainement',["idEntrainement" => $entrainement->id])}}" method="post" >
         @csrf
-        <h2 style="text-align: center;">Modifier un entrainement</h2>
+        <h2 style="text-align: center;">Composition de l'entrainement</h2>
         <label for="details" >Détails :</label>
         <textarea id="details" name="details" rows="4">{{$entrainement->details}}</textarea>
                 <label for="repos">Temps de repos (secondes) :</label>

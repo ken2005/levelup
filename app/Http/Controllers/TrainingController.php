@@ -270,10 +270,12 @@ class TrainingController extends Controller
         }
         else{
             $tabExercices = $request->exercice;
-
         }
-        for ($i=0; $i < count($tabExercices) ; $i++) { 
-            DB::table('serie')->insert( [
+        $levelUps = [];
+        $powerUps = [];
+        for ($i=0; $i < count($tabExercices) ; $i++) {
+            $meilleureSerie = DB::table('serie')->where('id_exercice',$request->exercice[$i])->where("id_user", Auth::user()->id)->orderBy('dificulte', 'DESC')->first();
+            $values = [
                 'id_training' => $idEntrainement,
                 'id_exercice' =>  $request->exercice[$i],
                 'dificulte' => $request->dificulte[$i],
@@ -282,12 +284,30 @@ class TrainingController extends Controller
                 'created_at' => now(),
                 'updated_at' => now(),
                 'id_user' => Auth::user()->id
-                ] );
+            ];
+            if ($meilleureSerie != null){
+                if ($request->dificulte[$i] > $meilleureSerie->dificulte) {
+                    $exo = DB::table("exercice")->where('id',$request->exercice[$i])->first();
+                    if ($request->nb_reps[$i] >= $meilleureSerie->nb_reps) {
+                        array_push($levelUps, $exo->name);
+                        $values["levelup"] = true;
+                    }
+                    else{
+                        array_push($powerUps, $exo->name);
+                        $values["powerup"] = true;
+                    }
+                }
+            }
+            DB::table('serie')->insert($values);
         }
-        
-        return to_route('training',["levelUps" => '-1',"powerUps" => '-1']);
+        if ($levelUps == []){
+            array_push($levelUps,"-1");
+        }
+        if ($powerUps == []){
+            array_push($powerUps,"-1");
+        }
+        return to_route('training',['levelUps' => implode(',',$levelUps),'powerUps' => implode(',',$powerUps)]);
     }
-
     public function doCreerEntrainement(TrainingRequest $request,$idProg){
         $infos = $request->validated();
         $entrainement = Entrainement::create(['id_programme' => $idProg, 'details' => $infos['details']]);
