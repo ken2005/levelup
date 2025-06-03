@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
@@ -25,20 +26,20 @@ class AuthController extends Controller
 
     public function logout()
     {
+        $user = Auth::user();
         Auth::logout();
+        Log::info('Utilisateur déconnecté', ['user_id' => $user->id, 'email' => $user->email]);
         return to_route('auth.login');
     }
 
     public function doLogin(LoginRequest $request)
     {
-        
         $credentials = $request->validated();
-
-        //dd($credentials);
 
         if(Auth::attempt($credentials, $request->remember))
         {
             session()->regenerate();
+            Log::info('Utilisateur connecté avec succès', ['email' => $credentials['email']]);
             $intended = session('url.intended');
             if ($intended && str_contains($intended, '/squad/doAddBro/')) {
                 $idBro = explode('/squad/doAddBro/', $intended)[1];
@@ -47,6 +48,7 @@ class AuthController extends Controller
             return redirect()->intended(route('home'));
         }
 
+        Log::warning('Echec lors de la connexion', ['email' => $credentials['email']]);
         return to_route('auth.login')->withErrors([
             'email' => 'Email invalide'
         ])->onlyInput('email');
@@ -55,21 +57,21 @@ class AuthController extends Controller
     public function doSignup(SignupRequest $request)
     {
         $credentials = $request->validated();
-        //dd($credentials);
-        
 
         $users = User::where('email', $request->email)->get();
 
         if(sizeof($users) > 0){
+            Log::warning('Tentative d\'inscription avec un email existant', ['email' => $credentials['email']]);
             return 'email déjà utilisé';
         }
         else{
-
-            User::create([
+            $user = User::create([
                 'name' => $credentials['name'],
                 'email' => $credentials['email'],
                 'password' => Hash::make($credentials['password'])
             ]);
+            
+            Log::info('Nouvel utilisateur inscrit', ['user_id' => $user->id, 'email' => $user->email]);
             
             if(Auth::attempt($credentials, $request->remember))
             {
@@ -78,8 +80,4 @@ class AuthController extends Controller
             }
         }
     }
-
-    
 }
-
-/* Kennan */

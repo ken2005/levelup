@@ -107,6 +107,7 @@ class TrainingController extends Controller
             ->where('id_programme', $idProg)
             ->select("id_exercice", "nb_reps", "ordre", DB::raw('COUNT(*) as nb_series'))
             ->groupBy('id_exercice', 'nb_reps', 'ordre')
+            ->orderBy('ordre')
             ->get();
                 
         return view('entrainements.modifier.programme',["programme" => $programme, "exercices" => $exercices ,"squads" => $squads, "exos_contenus" => $exos_contenus,]);

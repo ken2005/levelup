@@ -193,8 +193,7 @@
       <h1>PowerUp</h1>
       <h2>{{$powerUp}}</h2>
       <p>Vous vous êtes surpassé</p>
-    <button class="close" onclick="//document.getElementsByClassName('myModal')[0].parentElement.removeChild(document.getElementsByClassName('myModal')[0]);">
-      X</button>
+    
     </dialog>
     @endif
     @endforeach

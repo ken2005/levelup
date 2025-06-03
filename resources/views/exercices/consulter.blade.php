@@ -118,7 +118,7 @@
 
       <div class="slider-wrapper">
           <div class="card-list swiper-wrapper">
-              @foreach ($series as $serie)
+              @foreach ($series->reverse() as $serie)
                   <div class="card-item swiper-slide">
                       <h2>{{$serie->created_at}}</h2>
                       <p>
