@@ -3,28 +3,19 @@
     Home
 @endsection
 @section("content")
-    
-        <div style="max-width:80%; background-color: rgba(10,10,10,0.5); border-radius:1em; padding: 2em; resize:both; overflow:hidden; margin:auto; margin-top: 0em; margin-bottom: 0em;">
+<span id="home">
+    <div class="chart-container">
+        <canvas id="1" class="chart"></canvas>
+        <input id="model1" value="line" style="display:none;">
+    </div>
 
-            <canvas id="1" class="chart"></canvas>
-            <input id="model1" value="line" style="display:none;">
-        </div>
-
-        <div style="align-items:center; display:none; flex-direction:column; width:100%; margin-top: 2em;" class="mobile-only-button">
-            <a class="lien-discret" href="{{route('training',["levelUps" => '-1',"powerUps" => '-1'])}}">
-                <span class="button" style="width:fit-content;cursor: pointer;height: auto;color: #fff;user-select: none;padding: 35px;display: flex;flex-direction: column;align-items: center;justify-content: center;border-radius: 10px;backdrop-filter: blur(30px);background: rgba(255, 255, 255, 0.2);border: 1px solid rgba(255, 255, 255, 0.5); font-family: 'Montserrat', sans-serif;">
-                    Nouvel Entrainement
-                </span>
-            </a>
-        </div>
-
-        <style>
-            @media screen and (max-width: 768px) {
-                .mobile-only-button {
-                    display: flex !important;
-                }
-            }
-        </style>
+    <div class="mobile-only-button">
+        <a class="lien-discret" href="{{route('training',["levelUps" => '-1',"powerUps" => '-1'])}}">
+            <span class="button">
+                Nouvel Entrainement
+            </span>
+        </a>
+    </div>
     <script>
             for (let currentChart of  document.getElementsByClassName('chart')) {
                 let ctx = currentChart.getContext('2d');
@@ -74,6 +65,5 @@
                 })
             };
         </script>
-    </body>
-    </html>
+</span>
 @endsection

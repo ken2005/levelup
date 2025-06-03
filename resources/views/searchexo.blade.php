@@ -1,154 +1,12 @@
 @extends('layouts.app')
 
-@section('head')
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-        }
-        .search-container {
-            margin-bottom: 30px;
-            text-align: center;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
-        .search-container input, .search-container select {
-            padding: 12px;
-            margin: 0 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            width: 100%;
-            max-width: 300px;
-        }
-        .search-container input:focus, .search-container select:focus {
-            outline: none;
-            border-color: #3498db;
-            box-shadow: 0 0 5px rgba(52,152,219,0.3);
-        }
-        #results {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 10px;
-        }
-        .exercise-card {
-            background: white;
-            border: none;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.2s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        .exercise-card:hover {
-            transform: translateY(-5px);
-        }
-        .exercise-card h2 {
-            color: #2c3e50;
-            margin-top: 0;
-            font-size: clamp(1rem, 3vw, 1.2em);
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        .exercise-images {
-            margin-top: 10px;
-            position: relative;
-            padding-bottom: 100%;
-        }
-        .exercise-images img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-        .exercise-images img.second-image {
-            opacity: 0;
-        }
-        .exercise-card.visible .exercise-images img.second-image {
-            opacity: 1;
-        }
-        .exercise-info {
-            font-size: clamp(0.8em, 2vw, 0.9em);
-            color: #666;
-            margin-top: 10px;
-        }
-        strong {
-            color: #3498db;
-        }
-        .exercise-link {
-            display: inline-block;
-            background: #007bff;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.2s;
-            margin-right: 10px;
-            margin-top: 10px;
-        }
-        .exercise-link:hover {
-            background: #0056b3;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            .search-container {
-                padding: 15px;
-            }
-            .search-container input, .search-container select {
-                margin: 5px 0;
-            }
-            #results {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 5px;
-            }
-            .search-container {
-                padding: 10px;
-            }
-            #results {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-            .exercise-card {
-                padding: 10px;
-            }
-        }
-    </style>
-@endsection
-
 @section('page-name')
 Search
 @endsection
 
 @section('content')
+<span id="search-exo">
+
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search exercises...">
         <select id="filterCategory">
@@ -320,4 +178,5 @@ Search
 
         fetchExercises();
     </script>
+</span>
 @endsection

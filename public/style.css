@@ -1,0 +1,2707 @@
+* {
+scrollbar-width: none; /* Firefox */
+-ms-overflow-style: none;  /* IE 10+ */
+
+&::-webkit-scrollbar {
+background: transparent; /* Chrome/Safari/Webkit */
+width: 0px;
+}
+}
+body {
+background-image: url('https://kennan.alwaysdata.net/images/gymbackground.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+}
+
+nav{
+background-color: none;
+color: #ffffff;
+padding: 10px;
+text-align: center;
+font-size: 3em;
+font-family: Arial, sans-serif;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 2px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+margin-bottom: 20px;
+}
+nav a{
+color: #ffffff;
+text-decoration: none;
+margin-right: 20px;
+}
+nav a:hover{
+color: #ff0000;
+}
+
+.burger-menu {
+display: none;
+cursor: pointer;
+position: relative;
+left: -20px;
+top: -5px;
+}
+
+.burger-menu div {
+width: 35px;
+height: 5px;
+background-color: #ffffff;
+margin: 0 0;
+transition: 0.4s;
+}
+
+#phone-nav{
+display: none;
+height: 1.4em;
+}
+
+#page-actuelle{
+position: relative;
+top: -4px;
+left:-30px;
+padding-right: 0;
+margin:auto;
+
+}
+
+.hide{
+display:none;
+}
+
+.lien-discret {
+all: unset;
+cursor: pointer;
+
+}
+
+.lien-discret, nav a, div, button{
+-webkit-tap-highlight-color: transparent;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.lien-discret:focus, nav a:focus, div:focus, button:focus{
+outline: none !important;
+}
+
+#chrono{
+display: none;
+}
+
+@media screen and (max-width: 768px) {
+#chrono{
+    display: block;
+}
+#phone-nav{
+    display: flex;
+    justify-content:space-between;
+}
+.burger-menu {
+    display: block;
+}
+
+nav {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+nav a, #qrcode {
+    display: none;
+}
+
+#qrcode{
+    display: block;
+}
+#qrcode img{
+    position:relative;
+    top: -5px;
+}
+
+nav.show a {
+    display: block;
+    margin: 10px 0;
+}
+
+
+
+nav.show #page-actuelle {
+    display: none;
+}
+}
+
+.ham6 .top {
+stroke-dasharray: 40 172;
+}
+.ham6 .middle {
+stroke-dasharray: 40 111;
+}
+.ham6 .bottom {
+stroke-dasharray: 40 172;
+}
+.ham6.active .top {
+stroke-dashoffset: -132px;
+}
+.ham6.active .middle {
+stroke-dashoffset: -71px;
+}
+.ham6.active .bottom {
+stroke-dashoffset: -132px;
+}
+.ham {
+cursor: pointer;
+-webkit-tap-highlight-color: transparent;
+transition: transform 400ms;
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.line {
+fill:none;
+transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+stroke:#000;
+stroke-width:5.5;
+stroke-linecap:round;
+}
+
+
+
+#signup-form .card-body{
+            display: flex;
+            justify-content: center;
+        }
+
+        #signup-form .form-group{
+            display: flex;
+            flex-direction: column;
+        }
+        #signup-form h1{
+            color: #fff;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        #signup-form form {
+            align-items: center;
+            justify-content: center;
+            background: white;
+            padding: 3em;
+            width: 400px;
+            height: auto;
+            border-radius: 20px;
+            border-left: 1px solid white;
+            border-top: 1px solid white;
+            text-align: center;
+
+
+            p {
+                font-weight: 500;
+                color: #fff;
+                font-size: 1.4rem;
+                margin-top: 0;
+                margin-bottom: 60px;
+            }
+
+
+            input {
+                align-items: center;
+                width: auto;
+                padding: 1em;
+                margin-bottom: 2em;
+                border: 1px solid black;
+                border-radius: 10px;
+                color: black;
+                font-family: Montserrat, sans-serif;
+                font-weight: 500;
+
+
+                &[type="button"] {
+                    margin-top: 10px;
+                    width: 150px;
+                    font-size: 1rem;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                }
+            }
+            button {
+                width: 70%;
+                background-color: #ffffff;
+                color: black;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                margin: 5px 5px;
+                padding: 5px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+            }
+        }
+
+#login-form {
+    
+        .card-body{
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-group{
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1{
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        form {
+            align-items: center;
+            justify-content: center;
+            background: white;
+            padding: 3em;
+            width: 400px;
+            height: auto;
+            border-radius: 20px;
+            border-left: 1px solid white;
+            border-top: 1px solid white;
+            text-align: center;
+
+
+
+
+            input {
+                align-items: center;
+                width: auto;
+                padding: 1em;
+                margin-bottom: 2em;
+                border: 1px solid black;
+                border-radius: 10px;
+                color: black;
+                font-family: Montserrat, sans-serif;
+                font-weight: 500;
+
+
+                &[type="button"] {
+                    margin-top: 10px;
+                    width: 150px;
+                    font-size: 1rem;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                }
+            }
+            button {
+                width: 70%;
+                background-color: #ffffff;
+                color: black;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                margin: 5px 5px;
+                padding: 5px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                margin-bottom: 1em;
+            }
+
+            a{
+                color: #008232;
+            }
+        }
+
+}
+
+#creer-entrainement {
+    h2 {
+        text-align: center;
+    }
+
+    .repos-container {
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.2em;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 1em 0;
+    }
+
+    #repos {
+        width: 6em;
+        padding: 0.8em;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        background-color: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        outline: none;
+    }
+
+    #startButton {
+        padding: 0.8em 1.5em;
+        border-radius: 6px;
+        border: none;
+        background: linear-gradient(145deg, #4CAF50, #45a049);
+        color: white;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    #chrono {
+        display: none;
+        background: rgba(0,0,0,0.3);
+        border-radius: 8px;
+        padding: 0.5em 1em;
+        text-align: center;
+        font-size: 1.5em;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 2px;
+        box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .exercices-container {
+        width: 100%;
+        min-height: 10em;
+        padding: 0.7em;
+        margin-top: 0.5em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        transition: all 0.3s ease;
+        font-family: 'Roboto', 'Arial', sans-serif;
+        font-size: 14px;
+    }
+
+    .exercice-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.7em;
+        margin-top: 0.5em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        transition: all 0.3s ease;
+        font-family: 'Roboto', 'Arial', sans-serif;
+        font-size: 14px;
+    }
+
+    .exercice-name {
+        width: 90%;
+        padding: 0.7em;
+        margin-top: 0.5em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        transition: all 0.3s ease;
+        font-family: 'Roboto', 'Arial', sans-serif;
+        font-size: 14px;
+    }
+
+    .hidden-input {
+        display: none;
+    }
+
+    .reps-input, .difficulty-input {
+        overflow: hidden;
+        width: 3em;
+        padding: 0.7em;
+        margin-top: 0.5em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        transition: all 0.3s ease;
+        font-family: 'Roboto', 'Arial', sans-serif;
+        font-size: 14px;
+    }
+
+    .difficulty-input {
+        width: 5em;
+    }
+
+    .timer-button {
+        margin-left: 5px;
+        padding: 5px 10px;
+        border-radius: 100%;
+        border: none;
+        background: linear-gradient(145deg, #4CAF50, #45a049);
+        color: white;
+        cursor: pointer;
+    }
+
+    .delete-button {
+        margin-left: 5px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        border: none;
+        background-color: rgba(0,0,0,0);
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        width: 1em;
+    }
+
+    .add-exercice {
+        padding: 0.7em;
+        margin-top: 0.5em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #000;
+        transition: all 0.3s ease;
+        font-family: 'Roboto', 'Arial', sans-serif;
+        font-size: 14px;
+    }
+
+    .exercice-button {
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .exercice-name {
+        width:100%;
+        display: block;
+        border: 1px solid #ddd;
+        padding: 0.7em;
+        margin-top: 0.5em;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        transition: all 0.3s ease;
+        font-family: 'Roboto', 'Arial', sans-serif;
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
+    .create-exercice {
+        padding: 0.7em;
+        margin-top: 0.5em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #000;
+        transition: all 0.3s ease;
+        font-family: 'Roboto', 'Arial', sans-serif;
+        font-size: 14px;
+    }
+
+    .submit-button {
+        margin-top: 1em;
+        padding: 0.8em 1.5em;
+        border-radius: 6px;
+        border: none;
+        background: white;
+        color: black;
+        cursor: pointer;
+        font-weight: 500;
+        width: 100%;
+    }
+
+    .chrono-container {
+        overflow: hidden;
+        width: 5em;
+        padding: 0.7em 0;
+        margin-top: 0.5em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: none;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+        /* Firefox */
+        input[type=number] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+        }
+        dialog::backdrop {
+        background: rgba(100,11,100,.25);
+        }
+        .blur {
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px);
+        -o-filter: blur(2px);
+        -ms-filter: blur(2px);
+        filter: blur(2px);
+        }
+         form {
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(10, 10, 10, 0.7);
+            border-radius: 1em;
+            padding: 2em;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Arial', sans-serif;
+        }
+    
+         form h2 {
+            text-align: center;
+            margin-bottom: 1.5em;
+            color: #fff;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-weight: 600;
+        }
+    
+         form label {
+            display: block;
+            margin-top: 1em;
+            font-weight: bold;
+            font-family: 'Verdana', 'Geneva', sans-serif;
+        }
+    
+         form input[type="text"],
+         form textarea {
+            width: 100%;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+    
+         form input[type="text"]:focus,
+         form textarea:focus {
+            outline: none;
+            border-color: #fff;
+            box-shadow: 0 0 5px rgba(100, 0, 0, 0.5);
+        }
+    
+         form .submit-button {
+            display: block;
+            width: 100%;
+            padding: 0.8em;
+            margin-top: 1.5em;
+            background-color: #fff;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-family: 'Segoe UI', 'Tahoma', sans-serif;
+        }
+    
+         form .submit-button:hover {
+            background-color: #f00;
+        }
+
+        #exos{
+            position: fixed;
+                width: 80%;
+                margin:auto;
+                height: fit-content;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                box-sizing: border-box;
+                background-color: rgba(255, 255, 255, 0.1);
+                color: #fff;
+                transition: all 0.3s ease;
+                font-family: 'Roboto', 'Arial', sans-serif;
+                font-size: 14px;
+        }
+}
+
+#creer-exo {
+     form input[type="number"] {
+        -moz-appearance: textfield;
+    }
+        form input[type="number"]::-webkit-inner-spin-button, 
+        form input[type="number"]::-webkit-outer-spin-button,
+        form input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0; 
+    }
+
+        form {
+        width: 80%;
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: rgba(10, 10, 10, 0.7);
+        border-radius: 1em;
+        padding: 2em;
+        color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: 'Arial', sans-serif;
+    }
+
+        form h2 {
+        text-align: center;
+        margin-bottom: 1.5em;
+        color: #fff;
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        font-weight: 600;
+    }
+
+        form label {
+        display: block;
+        margin-top: 1em;
+        font-weight: bold;
+        font-family: 'Verdana', 'Geneva', sans-serif;
+    }
+
+        form input,select,
+        form textarea {
+        width: 100%;
+        padding: 0.7em;
+        margin-top: 0.5em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        transition: all 0.3s ease;
+        font-family: 'Roboto', 'Arial', sans-serif;
+        font-size: 14px;
+    }
+
+        form input:focus,select:focus,
+        form textarea:focus {
+        outline: none;
+        border-color: #fff;
+        box-shadow: 0 0 5px rgba(100, 0, 0, 0.5);
+    }
+
+        form button[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 0.8em;
+        margin-top: 1.5em;
+        background-color: #fff;
+        color: black;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        font-family: 'Segoe UI', 'Tahoma', sans-serif;
+    }
+
+        form button[type="submit"]:hover {
+        background-color: #f00;
+    }
+
+    select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 98%;
+        background-position-y: 50%;
+        padding-right: 2em;
+    }
+
+    select option {
+        background-color: rgba(10, 10, 10, 0.9);
+        color: #fff;
+        padding: 0.5em;
+    }
+
+    select option:hover,
+    select option:focus,
+    select option:active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+#creer-programme {
+     form {
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(10, 10, 10, 0.7);
+            border-radius: 1em;
+            padding: 2em;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Arial', sans-serif;
+        }
+    
+         form h2 {
+            text-align: center;
+            margin-bottom: 1.5em;
+            color: #fff;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-weight: 600;
+        }
+    
+         form label {
+            display: block;
+            margin-top: 1em;
+            font-weight: bold;
+            font-family: 'Verdana', 'Geneva', sans-serif;
+        }
+    
+         form input[type="text"],
+         form textarea,  select {
+            width: 100%;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+    
+         form input[type="text"]:focus,
+         form textarea:focus {
+            outline: none;
+            border-color: #fff;
+            box-shadow: 0 0 5px rgba(100, 0, 0, 0.5);
+        }
+    
+         form button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 0.8em;
+            margin-top: 1.5em;
+            background-color: #fff;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-family: 'Segoe UI', 'Tahoma', sans-serif;
+        }
+    
+         form button[type="submit"]:hover {
+            background-color: #f00;
+        }
+}
+
+#modifier-programme {
+    input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
+
+        dialog::backdrop {
+            background: rgba(100,11,100,.25);
+        }
+
+        .blur {
+            -webkit-filter: blur(2px);
+            -moz-filter: blur(2px);
+            -o-filter: blur(2px);
+            -ms-filter: blur(2px);
+            filter: blur(2px);
+        }
+
+        form {
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(10, 10, 10, 0.7);
+            border-radius: 1em;
+            padding: 2em;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Arial', sans-serif;
+        }
+    
+        form h2 {
+            text-align: center;
+            margin-bottom: 1.5em;
+            color: #fff;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-weight: 600;
+        }
+    
+        form label {
+            display: block;
+            margin-top: 1em;
+            font-weight: bold;
+            font-family: 'Verdana', 'Geneva', sans-serif;
+        }
+    
+        form input[type="text"],
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+    
+        form input[type="text"]:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: #fff;
+            box-shadow: 0 0 5px rgba(100, 0, 0, 0.5);
+        }
+    
+        form button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 0.8em;
+            margin-top: 1.5em;
+            background-color: #fff;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-family: 'Segoe UI', 'Tahoma', sans-serif;
+        }
+    
+        form button[type="submit"]:hover {
+            background-color: #f00;
+        }
+
+        #exos {
+            position: fixed;
+            width: 80%;
+            margin: auto;
+            height: fit-content;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(50,5,50,.5);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        #exercices {
+            width: 100%;
+            min-height: 10em;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .serie {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        .exercice-name {
+            width: 80%;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        input[name^="nb_reps"], input[name^="nb_series"] {
+            overflow: hidden;
+            width: 4em;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        .delete-btn {
+            text-decoration: none;
+            color: red;
+            margin-left: 10px;
+            font-size: 20px;
+        }
+
+        hr {
+            border: 1px solid #ddd;
+            margin: 0.5em 0;
+        }
+
+        .add-exercice {
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #000;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        .exercice-item {
+            display: block;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        .create-exercice {
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #a5a;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+}
+
+#entrainement-listing {
+    /* Importing Google Font - Montserrat */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+    }
+    
+    #program-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /*min-height: 100vh;*/
+      background: url("images/bg.jpg")  no-repeat center;
+    }
+    
+    .slider-wrapper {
+      overflow: hidden;
+      max-width: 1200px;
+      margin: 0 70px 55px;
+    }
+    
+    .card-list .card-item, .button {
+      height: auto;
+      color: #fff;
+      user-select: none;
+      padding: 35px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      backdrop-filter: blur(30px);
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    .card-list .card-item .user-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 40px;
+      border: 3px solid #fff;
+      padding: 4px;
+    }
+    
+    .card-list .card-item .user-profession {
+      font-size: 1.15rem;
+      color: #e3e3e3;
+      font-weight: 500;
+      margin: 14px 0 40px;
+    }
+    
+    .card-list .card-item .message-button {
+      font-size: 1.25rem;
+      padding: 10px 35px;
+      color: #030728;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+      background: #fff;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+    
+    .card-list .card-item .message-button:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #fff;
+      color: #fff;
+    }
+    
+    .slider-wrapper .swiper-pagination-bullet {
+      background: #fff;
+      height: 13px;
+      width: 13px;
+      opacity: 0.5;
+    }
+    
+    .slider-wrapper .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+    
+    .slider-wrapper .swiper-slide-button {
+      color: #fff;
+      margin-top: -55px;
+      transition: 0.2s ease;
+    }
+    
+    .slider-wrapper .swiper-slide-button:hover {
+      color: #4658ff;
+    }
+
+    
+    
+
+        
+    
+    @media (max-width: 768px) {
+        .slider-wrapper {
+        margin: 0 10px 40px;
+      }
+    
+    .slider-wrapper .swiper-slide-button {
+        display: none;
+      }
+    }
+
+    .myModal{
+            position: fixed;
+                width: 80%;
+                margin:auto;
+                height: 80%;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                box-sizing: border-box;
+                background-color: rgba(255, 255, 255, 0.1);
+                color: #fff;
+                transition: all 0.3s ease;
+                font-family: 'Roboto', 'Arial', sans-serif;
+                font-size: 14px;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-content: center;
+                justify-content: space-around;
+                
+              }
+              
+        .lvlup{
+                
+            background-image: url('https://kennan.alwaysdata.net/images/levelup_icon.png');
+            background-position: center;
+        }
+
+        .pwrup{
+                
+                background-image: url('https://kennan.alwaysdata.net/images/powerup_icon.png');
+                background-position: center;
+            }
+
+        #centerpoint {
+            top: 50%;
+            left: 50%;
+            position: absolute;
+        }
+
+        .blur {
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px);
+        -o-filter: blur(2px);
+        -ms-filter: blur(2px);
+        filter: blur(2px);
+        }
+
+        dialog::backdrop {
+        background: rgba(100,11,100,1.25);
+        }
+        .button {
+            width: fit-content;
+            cursor: pointer;
+        }
+        .aaa {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .card-item {
+            min-width: min-content;
+            cursor: pointer;
+            position: relative;
+        }
+        .historique-img {
+            width: 3em;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .user-profession {
+            text-align: center;
+        }
+        .programme-details {
+            text-align: center;
+        }
+}
+
+#historique {
+    /* Importing Google Font - Montserrat */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+    }
+    
+    #program-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /*min-height: 100vh;*/
+      background: url("images/bg.jpg")  no-repeat center;
+    }
+    
+    .slider-wrapper {
+      overflow: hidden;
+      max-width: 1200px;
+      margin: 0 70px 55px;
+    }
+    
+    .card-list .card-item, .button {
+      height: auto;
+      color: #fff;
+      user-select: none;
+      padding: 35px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      backdrop-filter: blur(30px);
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    .card-list .card-item .user-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 40px;
+      border: 3px solid #fff;
+      padding: 4px;
+    }
+    
+    .card-list .card-item .user-profession {
+      font-size: 1.15rem;
+      color: #e3e3e3;
+      font-weight: 500;
+      margin: 14px 0 40px;
+    }
+    
+    .card-list .card-item .message-button {
+      font-size: 1.25rem;
+      padding: 10px 35px;
+      color: #030728;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+      background: #fff;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+    
+    .card-list .card-item .message-button:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #fff;
+      color: #fff;
+    }
+    
+    .slider-wrapper .swiper-pagination-bullet {
+      background: #fff;
+      height: 13px;
+      width: 13px;
+      opacity: 0.5;
+    }
+    
+    .slider-wrapper .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+    
+    .slider-wrapper .swiper-slide-button {
+      color: #fff;
+      margin-top: -55px;
+      transition: 0.2s ease;
+    }
+    
+    .slider-wrapper .swiper-slide-button:hover {
+      color: #4658ff;
+    }
+
+    
+    
+
+        
+    
+    @media (max-width: 768px) {
+        .slider-wrapper {
+        margin: 0 10px 40px;
+      }
+    
+    .slider-wrapper .swiper-slide-button {
+        display: none;
+      }
+    }
+    .myModal{
+            position: fixed;
+                width: 80%;
+                margin:auto;
+                height: 80%;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                box-sizing: border-box;
+                background-color: rgba(255, 255, 255, 0.1);
+                color: #fff;
+                transition: all 0.3s ease;
+                font-family: 'Roboto', 'Arial', sans-serif;
+                font-size: 14px;
+                /*
+                display: flex;
+                */
+                flex-direction: column;
+                text-align: center;
+                align-content: center;
+                justify-content: space-around;
+                
+              }
+             .myModal button {
+            display: block;
+            width: 100%;
+            padding: 0.8em;
+            margin-top: 1.5em;
+            background-color: #fff;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-family: 'Segoe UI', 'Tahoma', sans-serif;
+        }
+        .blur {
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px);
+        -o-filter: blur(2px);
+        -ms-filter: blur(2px);
+        filter: blur(2px);
+        }
+
+        dialog::backdrop {
+        background: rgba(100,11,100,.25);
+        }
+
+        #centerpoint {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        
+        .card-item {
+            min-width: min-content;
+            cursor: pointer;
+        }
+        
+        .aaa {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        .button {
+            width: fit-content;
+            cursor: pointer;
+        }
+}
+
+#exercice-consulter{
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    
+       * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Montserrat", sans-serif;
+      }
+
+      .chart-container {
+          max-width: 90%;
+          background-color: rgba(10,10,10,0.5);
+          border-radius: 1em;
+          padding: 2em;
+          margin: 20px auto;
+      }
+
+      .slider-wrapper {
+          overflow: hidden;
+          max-width: 1200px;
+          margin: 0 70px 20px;
+      }
+
+      .card-list .card-item {
+          height: auto;
+          color: #fff;
+          padding: 35px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+          backdrop-filter: blur(30px);
+          background: rgba(255, 255, 255, 0.2);
+          border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .swiper-pagination {
+          position: relative;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 10;
+      }
+
+      .swiper-pagination-bullet {
+          background: #fff;
+          height: 13px;
+          width: 13px;
+          opacity: 0.5;
+      }
+
+      .swiper-pagination-bullet-active {
+          opacity: 1;
+      }
+
+      .exercise-details {
+          max-width: 90%;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: rgba(10,10,10,0.5);
+          border-radius: 1em;
+          color: white;
+      }
+
+      .exercise-details h2 {
+          margin-bottom: 15px;
+      }
+
+      .exercise-details p {
+          margin: 10px 0;
+      }
+
+      .exercise-details textarea {
+          width: 100%;
+          height: 10em;
+          background-color: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          color: white;
+          border-radius: 8px;
+          padding: 12px;
+          font-size: 14px;
+          resize: none;
+          margin: 10px 0;
+      }
+
+      .exercise-details textarea:focus {
+          outline: none;
+          border-color: rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      }
+
+      @media (max-width: 768px) {
+          .slider-wrapper {
+              margin: 0 10px 40px;
+          }
+          .swiper-slide-button {
+              display: none;
+          }
+      }
+}
+
+#creer-api{
+    form input[type="number"] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
+        form input[type="number"]::-webkit-inner-spin-button, 
+        form input[type="number"]::-webkit-outer-spin-button,
+        form input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0; 
+        }
+
+        form {
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(10, 10, 10, 0.7);
+            border-radius: 1em;
+            padding: 2em;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Arial', sans-serif;
+        }
+
+        form h2 {
+            text-align: center;
+            margin-bottom: 1.5em;
+            color: #fff;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-weight: 600;
+        }
+
+        form label {
+            display: block;
+            margin-top: 1em;
+            font-weight: bold;
+            font-family: 'Verdana', 'Geneva', sans-serif;
+        }
+
+        form input,select,
+        form textarea {
+            width: 100%;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        form input:focus,select:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: #fff;
+            box-shadow: 0 0 5px rgba(100, 0, 0, 0.5);
+        }
+
+        form button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 0.8em;
+            margin-top: 1.5em;
+            background-color: #fff;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-family: 'Segoe UI', 'Tahoma', sans-serif;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #f00;
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+            background-repeat: no-repeat;
+            background-position-x: 98%;
+            background-position-y: 50%;
+            padding-right: 2em;
+        }
+
+        select option {
+            background-color: rgba(10, 10, 10, 0.9);
+            color: #fff;
+            padding: 0.5em;
+        }
+
+        select option:hover,
+        select option:focus,
+        select option:active {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .exercise-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .exercise-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .exercise-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .exercise-muscle {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        #exercises-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+}
+#exercice-modifier{
+    form input[type="number"] {
+        -moz-appearance: textfield;
+    }
+    form input[type="number"]::-webkit-inner-spin-button, 
+    form input[type="number"]::-webkit-outer-spin-button,
+    form input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0; 
+    }
+
+    form {
+        width: 80%;
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: rgba(10, 10, 10, 0.7);
+        border-radius: 1em;
+        padding: 2em;
+        color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: 'Arial', sans-serif;
+    }
+
+    form h2 {
+        text-align: center;
+        margin-bottom: 1.5em;
+        color: #fff;
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        font-weight: 600;
+    }
+
+    form label {
+        display: block;
+        margin-top: 1em;
+        font-weight: bold;
+        font-family: 'Verdana', 'Geneva', sans-serif;
+    }
+
+    form input,select,
+    form textarea {
+        width: 100%;
+        padding: 0.7em;
+        margin-top: 0.5em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        transition: all 0.3s ease;
+        font-family: 'Roboto', 'Arial', sans-serif;
+        font-size: 14px;
+    }
+
+    form input:focus,select:focus,
+    form textarea:focus {
+        outline: none;
+        border-color: #fff;
+        box-shadow: 0 0 5px rgba(100, 0, 0, 0.5);
+    }
+
+    form button[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 0.8em;
+        margin-top: 1.5em;
+        background-color: #fff;
+        color: black;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        font-family: 'Segoe UI', 'Tahoma', sans-serif;
+    }
+
+    form button[type="submit"]:hover {
+        background-color: #f00;
+    }
+
+    select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 98%;
+        background-position-y: 50%;
+        padding-right: 2em;
+    }
+
+    select option {
+        background-color: rgba(10, 10, 10, 0.9);
+        color: #fff;
+        padding: 0.5em;
+    }
+
+    select option:hover,
+    select option:focus,
+    select option:active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+#add-bro{
+    button{
+        display: block;
+            width: 100%;
+            padding: 0.8em;
+            margin-top: 1.5em;
+            background-color: #fff;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-family: 'Segoe UI', 'Tahoma', sans-serif;
+    }
+    h1{
+        color: #fff;
+    }
+}
+
+#creer-squad{
+    form input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        form input[type="number"]::-webkit-inner-spin-button, 
+        form input[type="number"]::-webkit-outer-spin-button,
+        form input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0; 
+        }
+
+        form {
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(10, 10, 10, 0.7);
+            border-radius: 1em;
+            padding: 2em;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Arial', sans-serif;
+        }
+    
+        form h2 {
+            text-align: center;
+            margin-bottom: 1.5em;
+            color: #fff;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-weight: 600;
+        }
+    
+        form label {
+            display: block;
+            margin-top: 1em;
+            font-weight: bold;
+            font-family: 'Verdana', 'Geneva', sans-serif;
+        }
+    
+        form input,select,
+        form textarea {
+            width: 100%;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+    
+        form input:focus,select:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: #fff;
+            box-shadow: 0 0 5px rgba(100, 0, 0, 0.5);
+        }
+    
+        form button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 0.8em;
+            margin-top: 1.5em;
+            background-color: #fff;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-family: 'Segoe UI', 'Tahoma', sans-serif;
+        }
+    
+        form button[type="submit"]:hover {
+            background-color: #f00;
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+            background-repeat: no-repeat;
+            background-position-x: 98%;
+            background-position-y: 50%;
+            padding-right: 2em;
+        }
+
+        select option {
+            background-color: rgba(10, 10, 10, 0.9);
+            color: #fff;
+            padding: 0.5em;
+        }
+
+        select option:hover,
+        select option:focus,
+        select option:active {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+}
+
+#modifier-squad{
+    form input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        form input[type="number"]::-webkit-inner-spin-button, 
+        form input[type="number"]::-webkit-outer-spin-button,
+        form input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0; 
+        }
+
+        form {
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(10, 10, 10, 0.7);
+            border-radius: 1em;
+            padding: 2em;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'Arial', sans-serif;
+        }
+    
+        form h2 {
+            text-align: center;
+            margin-bottom: 1.5em;
+            color: #fff;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-weight: 600;
+        }
+    
+        form label {
+            display: block;
+            margin-top: 1em;
+            font-weight: bold;
+            font-family: 'Verdana', 'Geneva', sans-serif;
+        }
+    
+        form input,select,
+        form textarea {
+            width: 100%;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+    
+        form input:focus,select:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: #fff;
+            box-shadow: 0 0 5px rgba(100, 0, 0, 0.5);
+        }
+    
+        form button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 0.8em;
+            margin-top: 1.5em;
+            background-color: #fff;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-family: 'Segoe UI', 'Tahoma', sans-serif;
+        }
+    
+        form button[type="submit"]:hover {
+            background-color: #f00;
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+            background-repeat: no-repeat;
+            background-position-x: 98%;
+            background-position-y: 50%;
+            padding-right: 2em;
+        }
+
+        select option {
+            background-color: rgba(10, 10, 10, 0.9);
+            color: #fff;
+            padding: 0.5em;
+        }
+
+        select option:hover,
+        select option:focus,
+        select option:active {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        #exos {
+            position: fixed;
+            width: 80%;
+            margin: auto;
+            height: fit-content;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(50,5,50,.5);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        #gymbros {
+            width: 100%;
+            min-height: 10em;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        #gymbros > div {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        #gymbros > div > div {
+            width: 100%;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        #gymbros > div:last-child {
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #000;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        .lien-discret span {
+            display: block;
+            padding: 0.7em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', 'Arial', sans-serif;
+            font-size: 14px;
+        }
+}
+
+#squad {
+    @media screen and (max-width: 768px) {
+        .listItem {
+            flex-direction: row;
+            gap: 10px;
+            text-align: left;
+            padding: 0.8em;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+
+        .listItemButtons {
+            width: auto;
+            justify-content: flex-end;
+            flex-shrink: 0;
+        }
+
+        button {
+            padding: 0.4em 0.8em;
+            font-size: 0.8em;
+            white-space: nowrap;
+        }
+
+        h1 {
+            font-size: 1.2em !important;
+            margin: 0.5em 0 !important;
+        }
+
+        h2 {
+            font-size: 1.2em !important;
+        }
+
+        .cardlist {
+            padding: 0.5em;
+            margin: 0.5em 0 !important;
+        }
+
+        .scrollable {
+            max-height: 150px;
+        }
+    }
+
+    .cardlist {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(10,10,10,0.7);
+        border-radius: 15px;
+        align-content: center;
+        color: white;
+        margin: 1em 0;
+        max-height: 400px;
+        overflow: auto;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        height: fit-content;
+        padding: 1em;
+    }
+
+    .cardlist h2 {
+        margin-bottom: 15px;
+        font-size: 1.5em;
+    }
+
+    .cardlist > div {
+        padding: 0.5em;
+    }
+
+    #lienInvit {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: rgba(255,255,255,0.1);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    #shareLink {
+        flex: 1;
+        word-break: break-all;
+        font-size: 1em;
+    }
+
+    #share {
+        cursor: pointer;
+        background-image: url('https://pngimg.com/d/share_PNG36.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 2em;
+        aspect-ratio: 1/1;
+        background-color: rgba(54, 34, 34,0.0);
+        background-position: center;
+        border-radius: 5px;
+        transition: transform 0.2s;
+    }
+
+    #share:hover {
+        transform: scale(1.1);
+    }
+
+    .listItemButtons{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        width: auto;
+    }
+
+    .scrollable{
+        overflow: auto;
+        max-height: 250px;
+    }
+    
+    .cardlist h1 {
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0.5em 0;
+    }
+    
+    .listItem{
+        background-color: rgba(30,30,30,0.6);
+        width: 90%;
+        margin: 1% auto;
+        border-radius: 12px;
+        padding: 0.8em;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid rgba(255,255,255,0.1);
+        transition: transform 0.2s;
+        gap: 10px;
+    }
+
+    .listItem:hover {
+        transform: scale(1.02);
+        border-color: rgba(255,255,255,0.3);
+    }
+    
+    .owned{
+        background-color: rgba(80,80,80,0.6);
+        border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .listItem span {
+        font-size: 1em;
+        min-width: 0;
+        flex: 1;
+    }
+
+    #squad-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    button{
+        padding: 0.6em 1em;
+        margin: 0;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.9em;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-family: 'Segoe UI', 'Tahoma', sans-serif;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        color: white;
+    }
+
+    .accept-button {
+        background-color: #4CAF50;
+    }
+
+    .refuse-button {
+        background-color: #f44336;
+    }
+
+    .edit-button {
+        background-color: #2196F3;
+    }
+
+    .create-button {
+        background-color: #4CAF50;
+        font-size: 1em;
+    }
+
+    button:hover {
+        opacity: 0.8;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .create-squad {
+        display: block;
+        padding: 0.8em;
+    }
+
+    .scrollable::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .scrollable::-webkit-scrollbar-track {
+        background: rgba(255,255,255,0.1);
+        border-radius: 4px;
+    }
+
+    .scrollable::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.3);
+        border-radius: 4px;
+    }
+
+    .scrollable::-webkit-scrollbar-thumb:hover {
+        background: rgba(255,255,255,0.4);
+    }
+}
+
+#exercices {
+    .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+      }
+
+      .scrollable-content {
+          padding: 0.5em;
+          max-height: 80%;
+          overflow-y: auto;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+      }
+
+      .scrollable-content::-webkit-scrollbar {
+          background: transparent;
+          width: 0px;
+      }
+
+      .exercise-link {
+          text-decoration: none;
+          color: inherit;
+      }
+
+      .exercise-content {
+          flex: 1;
+          width: 60%;
+          overflow: hidden;
+      }
+
+      .exercise-name {
+          font-size: 1.1em;
+          font-weight: bold;
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 53vw;
+      }
+
+      .exercise-method {
+          font-size: 0.9em;
+          color: #ccc;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+
+      .exercise-details {
+          font-size: 0.9em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+          -webkit-box-orient: vertical;
+          max-width: 53vw;
+      }
+
+      .inline-form {
+          display: inline;
+      }
+
+      .button-container {
+          display: flex;
+          justify-content: center;
+          margin-top: 1em;
+          flex-wrap: wrap;
+      }
+
+      .lien-discret {
+          display: block;
+          padding: 0.8em;
+      }
+
+      .edit-button {
+          background-color: #2196F3;
+          border: none;
+          border-radius: 8px;
+          color: white;
+          transition: all 0.3s;
+      }
+
+      .delete-button {
+          background-color: #f44336;
+          border: none;
+          border-radius: 8px;
+          color: white;
+          transition: all 0.3s;
+      }
+
+      .add-button {
+          background-color: #4CAF50;
+          border: none;
+          border-radius: 8px;
+          color: white;
+          transition: all 0.3s;
+          font-size: 1em;
+      }
+
+      .search-button {
+          background-color: #FF9800;
+          border: none;
+          border-radius: 8px;
+          color: white;
+          transition: all 0.3s;
+          font-size: 1em;
+      }
+
+      @media screen and (max-width: 768px) {
+          .listItem {
+              flex-direction: row;
+              gap: 10px;
+              text-align: left;
+              padding: 0.8em;
+              justify-content: space-between;
+              align-items: center;
+              flex-wrap: nowrap;
+              width: 95%;
+          }
+
+          .listItemButtons {
+              width: auto;
+              justify-content: flex-end;
+              flex-shrink: 0;
+          }
+
+          button {
+              padding: 0.4em 0.8em;
+              font-size: 0.8em;
+              white-space: nowrap;
+          }
+
+          h1 {
+              font-size: 1.2em !important;
+              margin: 0.5em 0 !important;
+          }
+
+          .cardlist {
+              padding: 0.5em;
+              margin: 0.5em 0 !important;
+          }
+      }
+
+      .listItemButtons {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 10px;
+          width: auto;
+          flex-shrink: 0;
+      }
+    
+      .cardlist {
+          display: flex;
+          flex-direction: column;
+          background-color: rgba(10,10,10,0.7);
+          border-radius: 15px;
+          align-content: center;
+          color: white;
+          margin: 1em 0;
+          overflow: auto;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .cardlist h1 {
+          text-align: center;
+          font-size: 1.5em;
+          margin: 0.5em 0;
+      }
+
+      .listItem {
+          background-color: rgba(30,30,30,0.6);
+          width: 95%;
+          margin: 1% auto;
+          border-radius: 12px;
+          padding: 0.8em;
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid rgba(255,255,255,0.1);
+          transition: all 0.3s ease;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 10px;
+          background: rgba(255,255,255,0.1);
+          padding: 10px;
+          border-radius: 10px;
+      }
+
+      .listItem:hover {
+          border-color: rgba(255,255,255,0.3);
+      }
+
+      button {
+          padding: 0.6em 1em;
+          margin: 0;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 0.9em;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          font-family: 'Segoe UI', 'Tahoma', sans-serif;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      }
+
+      button:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      }
+
+      .cardlist {
+          max-height: 80vh;
+          overflow-y: auto;
+      }
+}
+
+#search-exo{
+    body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+        }
+        .search-container {
+            margin-bottom: 30px;
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .search-container input, .search-container select {
+            padding: 12px;
+            margin: 0 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 300px;
+        }
+        .search-container input:focus, .search-container select:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52,152,219,0.3);
+        }
+        #results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+        .exercise-card {
+            background: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .exercise-card:hover {
+            transform: translateY(-5px);
+        }
+        .exercise-card h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: clamp(1rem, 3vw, 1.2em);
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .exercise-images {
+            margin-top: 10px;
+            position: relative;
+            padding-bottom: 100%;
+        }
+        .exercise-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .exercise-images img.second-image {
+            opacity: 0;
+        }
+        .exercise-card.visible .exercise-images img.second-image {
+            opacity: 1;
+        }
+        .exercise-info {
+            font-size: clamp(0.8em, 2vw, 0.9em);
+            color: #666;
+            margin-top: 10px;
+        }
+        strong {
+            color: #3498db;
+        }
+        .exercise-link {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.2s;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        .exercise-link:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .search-container {
+                padding: 15px;
+            }
+            .search-container input, .search-container select {
+                margin: 5px 0;
+            }
+            #results {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+            .search-container {
+                padding: 10px;
+            }
+            #results {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .exercise-card {
+                padding: 10px;
+            }
+        }
+}
+
+#home{
+    .chart-container {
+                max-width: 80%;
+                background-color: rgba(10,10,10,0.5);
+                border-radius: 1em;
+                padding: 2em;
+                resize: both;
+                overflow: hidden;
+                margin: auto;
+                margin-top: 0em;
+                margin-bottom: 0em;
+            }
+
+            .mobile-only-button {
+                align-items: center;
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 2em;
+            }
+
+            .button {
+                width: fit-content;
+                cursor: pointer;
+                height: auto;
+                color: #fff;
+                user-select: none;
+                padding: 35px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                backdrop-filter: blur(30px);
+                background: rgba(255, 255, 255, 0.2);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            @media screen and (max-width: 768px) {
+                .mobile-only-button {
+                    display: flex !important;
+                }
+            }
+}

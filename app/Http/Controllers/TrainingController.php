@@ -309,43 +309,6 @@ class TrainingController extends Controller
         }
         return to_route('training',['levelUps' => implode(',',$levelUps),'powerUps' => implode(',',$powerUps)]);
     }
-    public function doCreerEntrainement(TrainingRequest $request,$idProg){
-        $infos = $request->validated();
-        $entrainement = Entrainement::create(['id_programme' => $idProg, 'details' => $infos['details']]);
-        $levelUps = [];
-        $powerUps = [];
-        if ($request->exercice!= null){
-            for ($i=0; $i < count($request->exercice) ; $i++) { 
-                # code...
-                //DB::insert('insert into contenir (id_programme, id_exercice, nb_reps) values (?, ?, ?)', [$idProg, $request->exercice[$i], $request->nb_reps[$i]]);
-                $meilleureSerie = DB::table('serie')->where('id_exercice',$request->exercice[$i])->where("id_user", Auth::user()->id)->orderBy('dificulte', 'DESC')->first();
-                $values = [ 'id_training' => $entrainement->id, 'dificulte' => $request->dificulte[$i], 'id_exercice' =>  $request->exercice[$i], 'nb_reps' => $request->nb_reps[$i], 'id_user' => Auth::user()->id ];
-                if ($meilleureSerie != null){
-    
-                    if ($request->dificulte[$i] > $meilleureSerie->dificulte) {
-                        $exo = DB::table("exercice")->where('id',$request->exercice[$i])->first();
-                        if ($request->nb_reps[$i] >= $meilleureSerie->nb_reps) {
-                            array_push($levelUps, $exo->name);
-                            $values["levelup"] = true;
-                        }
-                        else{
-                            array_push($powerUps, $exo->name);
-                            $values["powerup"] = true;
-    
-                        }
-                    }
-                }
-                DB::table('serie')->insert( $values );
-            }
-        }
-        if ($levelUps == []){
-            array_push($levelUps,"-1");
-        }
-        if ($powerUps == []){
-            array_push($powerUps,"-1");
-        }
-        return to_route('training',['levelUps' => implode(',',$levelUps),'powerUps' => implode(',',$powerUps)]);
-    }
 
     public function historique($idProg){
         $entrainements = DB::table("training")->where('id_programme', $idProg)->orderBy('created_at', 'DESC')->get();

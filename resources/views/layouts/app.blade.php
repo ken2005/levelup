@@ -19,182 +19,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         @yield("head")
         <!-- Styles -->
-        <style>
-            * {
-                scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE 10+ */
-
-  &::-webkit-scrollbar {
-    background: transparent; /* Chrome/Safari/Webkit */
-    width: 0px;
-  }
-            }
-            body {
-                background-image: url('https://kennan.alwaysdata.net/images/gymbackground.jpg');
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-            }
-
-            nav{
-                background-color: none;
-                color: #ffffff;
-                padding: 10px;
-                text-align: center;
-                font-size: 3em;
-                font-family: Arial, sans-serif;
-                font-weight: bold;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                border-radius: 5px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-                margin-bottom: 20px;
-            }
-            nav a{
-                color: #ffffff;
-                text-decoration: none;
-                margin-right: 20px;
-            }
-            nav a:hover{
-                color: #ff0000;
-            }
-
-            .burger-menu {
-                display: none;
-                cursor: pointer;
-                position: relative;
-                left: -20px;
-                top: -5px;
-            }
-
-            .burger-menu div {
-                width: 35px;
-                height: 5px;
-                background-color: #ffffff;
-                margin: 0 0;
-                transition: 0.4s;
-            }
-
-            #phone-nav{
-                display: none;
-                height: 1.4em;
-            }
-
-            #page-actuelle{
-                position: relative;
-                top: -4px;
-                left:-30px;
-                padding-right: 0;
-                margin:auto;
-
-            }
-
-            .hide{
-                display:none;
-            }
-
-            .lien-discret {
-                all: unset;
-            cursor: pointer;
-
-            }
-
-            .lien-discret, nav a, div, button{
-                -webkit-tap-highlight-color: transparent;
-                -webkit-touch-callout: none;
-                -webkit-user-select: none;
-                -khtml-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-            .lien-discret:focus, nav a:focus, div:focus, button:focus{
-                outline: none !important;
-            }
-
-            #chrono{
-                display: none;
-            }
-
-            @media screen and (max-width: 768px) {
-                #chrono{
-                    display: block;
-                }
-                #phone-nav{
-                    display: flex;
-                    justify-content:space-between;
-                }
-                .burger-menu {
-                    display: block;
-                }
-
-                nav {
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
-
-                nav a, #qrcode {
-                    display: none;
-                }
-
-                #qrcode{
-                    display: block;
-                }
-                #qrcode img{
-                    position:relative;
-                    top: -5px;
-                }
-
-                nav.show a {
-                    display: block;
-                    margin: 10px 0;
-                }
-
-    
-
-                nav.show #page-actuelle {
-                    display: none;
-                }
-            }
-
-            .ham6 .top {
-            stroke-dasharray: 40 172;
-            }
-            .ham6 .middle {
-            stroke-dasharray: 40 111;
-            }
-            .ham6 .bottom {
-            stroke-dasharray: 40 172;
-            }
-            .ham6.active .top {
-            stroke-dashoffset: -132px;
-            }
-            .ham6.active .middle {
-            stroke-dashoffset: -71px;
-            }
-            .ham6.active .bottom {
-            stroke-dashoffset: -132px;
-            }
-            .ham {
-            cursor: pointer;
-            -webkit-tap-highlight-color: transparent;
-            transition: transform 400ms;
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            }
-
-            .line {
-            fill:none;
-            transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-            stroke:#000;
-            stroke-width:5.5;
-            stroke-linecap:round;
-            }
-            
-        </style>
+        <link rel="stylesheet" href="{{ asset('style.css') }}">
     </head>
     <body>
         <header>
@@ -275,16 +100,16 @@
         </style>
         <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
             <script>
-                        if ('serviceWorker' in navigator) {
-                            window.addEventListener('load', function() {
-                                navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                                    console.log('ServiceWorker registration successful');
-                                }, function(err) {
-                                    console.log('ServiceWorker registration failed: ', err);
-                                });
-                            });
-                        }
-                    </script>
+                if ('serviceWorker' in navigator) {
+                    window.addEventListener('load', function() {
+                        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                            console.log('ServiceWorker registration successful');
+                        }, function(err) {
+                            console.log('ServiceWorker registration failed: ', err);
+                        });
+                    });
+                }
+            </script>
             
     </body>
 </html>

@@ -6,115 +6,16 @@
   @section("head")
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    
-      main * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: "Montserrat", sans-serif;
-      }
-
-      .chart-container {
-          max-width: 90%;
-          background-color: rgba(10,10,10,0.5);
-          border-radius: 1em;
-          padding: 2em;
-          margin: 20px auto;
-      }
-
-      .slider-wrapper {
-          overflow: hidden;
-          max-width: 1200px;
-          margin: 0 70px 20px;
-      }
-
-      .card-list .card-item {
-          height: auto;
-          color: #fff;
-          padding: 35px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          border-radius: 10px;
-          backdrop-filter: blur(30px);
-          background: rgba(255, 255, 255, 0.2);
-          border: 1px solid rgba(255, 255, 255, 0.5);
-      }
-
-      .swiper-pagination {
-          position: relative;
-          bottom: 10px;
-          left: 50%;
-          transform: translateX(-50%);
-          z-index: 10;
-      }
-
-      .swiper-pagination-bullet {
-          background: #fff;
-          height: 13px;
-          width: 13px;
-          opacity: 0.5;
-      }
-
-      .swiper-pagination-bullet-active {
-          opacity: 1;
-      }
-
-      .exercise-details {
-          max-width: 90%;
-          margin: 20px auto;
-          padding: 20px;
-          background-color: rgba(10,10,10,0.5);
-          border-radius: 1em;
-          color: white;
-      }
-
-      .exercise-details h2 {
-          margin-bottom: 15px;
-      }
-
-      .exercise-details p {
-          margin: 10px 0;
-      }
-
-      .exercise-details textarea {
-          width: 100%;
-          height: 10em;
-          background-color: rgba(255, 255, 255, 0.1);
-          border: 1px solid rgba(255, 255, 255, 0.3);
-          color: white;
-          border-radius: 8px;
-          padding: 12px;
-          font-size: 14px;
-          resize: none;
-          margin: 10px 0;
-      }
-
-      .exercise-details textarea:focus {
-          outline: none;
-          border-color: rgba(255, 255, 255, 0.5);
-          box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-      }
-
-      @media (max-width: 768px) {
-          .slider-wrapper {
-              margin: 0 10px 40px;
-          }
-          .swiper-slide-button {
-              display: none;
-          }
-      }
+      
   </style>
   @endsection
 
   @section('content')
-  
+  <span id="exercice-consulter">
+
   <div class="chart-container">
       <canvas id="exerciseChart" class="chart"></canvas>
-          <input id="model1" value="line" style="display:none;">
-      </div>
+    </div>
 
       <div class="slider-wrapper">
           <div class="card-list swiper-wrapper">
@@ -216,4 +117,5 @@
               }
           });
       </script>
+  </span>
   @endsection

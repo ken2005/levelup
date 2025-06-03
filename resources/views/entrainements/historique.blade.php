@@ -4,173 +4,15 @@
 @endsection
 @section("head")
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <style>
-    /* Importing Google Font - Montserrat */
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    
-    main * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Montserrat", sans-serif;
-    }
-    
-    main #program-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      /*min-height: 100vh;*/
-      background: url("images/bg.jpg")  no-repeat center;
-    }
-    
-    main .slider-wrapper {
-      overflow: hidden;
-      max-width: 1200px;
-      margin: 0 70px 55px;
-    }
-    
-    main .card-list .card-item, main .button {
-      height: auto;
-      color: #fff;
-      user-select: none;
-      padding: 35px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      backdrop-filter: blur(30px);
-      background: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-    }
-    
-    main .card-list .card-item .user-image {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin-bottom: 40px;
-      border: 3px solid #fff;
-      padding: 4px;
-    }
-    
-    main .card-list .card-item .user-profession {
-      font-size: 1.15rem;
-      color: #e3e3e3;
-      font-weight: 500;
-      margin: 14px 0 40px;
-    }
-    
-    main .card-list .card-item .message-button {
-      font-size: 1.25rem;
-      padding: 10px 35px;
-      color: #030728;
-      border-radius: 6px;
-      font-weight: 500;
-      cursor: pointer;
-      background: #fff;
-      border: 1px solid transparent;
-      transition: 0.2s ease;
-    }
-    
-    main .card-list .card-item .message-button:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid #fff;
-      color: #fff;
-    }
-    
-    main .slider-wrapper .swiper-pagination-bullet {
-      background: #fff;
-      height: 13px;
-      width: 13px;
-      opacity: 0.5;
-    }
-    
-    main .slider-wrapper .swiper-pagination-bullet-active {
-      opacity: 1;
-    }
-    
-    main .slider-wrapper .swiper-slide-button {
-      color: #fff;
-      margin-top: -55px;
-      transition: 0.2s ease;
-    }
-    
-    main .slider-wrapper .swiper-slide-button:hover {
-      color: #4658ff;
-    }
-
-    
-    
-
-        
-    
-    @media (max-width: 768px) {
-        main .slider-wrapper {
-        margin: 0 10px 40px;
-      }
-    
-      main .slider-wrapper .swiper-slide-button {
-        display: none;
-      }
-    }
-    .myModal{
-            position: fixed;
-                width: 80%;
-                margin:auto;
-                height: 80%;
-                border: 1px solid #ddd;
-                border-radius: 4px;
-                box-sizing: border-box;
-                background-color: rgba(255, 255, 255, 0.1);
-                color: #fff;
-                transition: all 0.3s ease;
-                font-family: 'Roboto', 'Arial', sans-serif;
-                font-size: 14px;
-                /*
-                display: flex;
-                */
-                flex-direction: column;
-                text-align: center;
-                align-content: center;
-                justify-content: space-around;
-                
-              }
-             .myModal button {
-            display: block;
-            width: 100%;
-            padding: 0.8em;
-            margin-top: 1.5em;
-            background-color: #fff;
-            color: black;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            font-family: 'Segoe UI', 'Tahoma', sans-serif;
-        }
-        .blur {
-        -webkit-filter: blur(2px);
-        -moz-filter: blur(2px);
-        -o-filter: blur(2px);
-        -ms-filter: blur(2px);
-        filter: blur(2px);
-        }
-
-        dialog::backdrop {
-        background: rgba(100,11,100,.25);
-        }
-  </style>
 @endsection
 @section('content')
-    <div id="centerpoint" style="position:absolute;top: 50%;left:50%;">
+<span id="historique">
 
+    <div id="centerpoint">
       <dialog class="myModal">
         Veux tu vraiment supprimer ce programme?<br>
         Tu n'auras plus accès à l'historique de ses séances.
         <a class="lien-discret" href="{{route('supprimerProgramme',["idProg" => $idProg])}}">
-
           <button>oui</button>
         </a>
         <button>non</button>
@@ -178,7 +20,6 @@
     </div>
     <script>
                 function showModal(){
-                    
                     document.getElementsByClassName('myModal')[0].showModal();
                     document.getElementsByTagName('body')[0].classList.add("blur");
                 }
@@ -199,16 +40,13 @@
                 <div class="card-list swiper-wrapper">
                         @foreach ($entrainements as $entrainement)
                             
-                                <div class="card-item swiper-slide" style="min-width:min-content;cursor: pointer;
-                                <?php if($entrainement->levelup){
-                                  
+                                <div class="card-item swiper-slide" style="<?php if($entrainement->levelup){
                                   echo "background-image: url('https://kennan.alwaysdata.net/images/levelup_icon.png');background-position:center;background-size:cover;";
                                 }
                                 else if ($entrainement->powerup){
                                   echo "background-image: url('https://kennan.alwaysdata.net/images/powerup_icon.png');background-position:center;background-size:cover;";
                                 }
-                                ?>
-                                " onclick="window.location.href='{{ route('modifierEntrainement', ['idEntrainement' => $entrainement->id]) }}'">
+                                ?>" onclick="window.location.href='{{ route('modifierEntrainement', ['idEntrainement' => $entrainement->id]) }}'">
                                 
                                     <!--
                                     <img src="images/img-1.jpg" alt="User Image" class="user-image">
@@ -264,22 +102,18 @@
                 </div>
             </div>
     </div>
-    <div class="aaa" style="align-items:center; display:flex; flex-direction:column; width:100%">
-        
+    <div class="aaa">
         <a class="lien-discret" href="{{route('creerEntrainement',["idProg" => $idProg, "nouvelExo" => -1, "exos"=> "a"])}}">
-
-            <span class="button" style="width:fit-content;cursor: pointer;" >
+            <span class="button">
                 Nouvel Entrainement
             </span>
         </a>
-        <a class="lien-discret" >
-
-            <span class="button" style="width:fit-content;cursor: pointer;" onclick="showModal()" >
+        <a class="lien-discret">
+            <span class="button" onclick="showModal()">
                 Supprimer le programme
             </span>
         </a>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
@@ -315,5 +149,6 @@
         }
     });
     </script>
+</span>
 
 @endsection

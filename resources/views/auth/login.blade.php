@@ -1,83 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-    <style>
-
-        .card-body{
-            display: flex;
-            justify-content: center;
-        }
-
-        .form-group{
-            display: flex;
-            flex-direction: column;
-        }
-        main h1{
-            color: #ffffff;
-            text-align: center;
-            margin-bottom: 1em;
-        }
-
-        form {
-            align-items: center;
-            justify-content: center;
-            background: white;
-            padding: 3em;
-            width: 400px;
-            height: auto;
-            border-radius: 20px;
-            border-left: 1px solid white;
-            border-top: 1px solid white;
-            text-align: center;
-
-
-
-
-            input {
-                align-items: center;
-                width: auto;
-                padding: 1em;
-                margin-bottom: 2em;
-                border: 1px solid black;
-                border-radius: 10px;
-                color: black;
-                font-family: Montserrat, sans-serif;
-                font-weight: 500;
-
-
-                &[type="button"] {
-                    margin-top: 10px;
-                    width: 150px;
-                    font-size: 1rem;
-
-                    &:hover {
-                        cursor: pointer;
-                    }
-
-                }
-            }
-            button {
-                width: 70%;
-                background-color: #ffffff;
-                color: black;
-                border: none;
-                cursor: pointer;
-                transition: background-color 0.3s;
-                margin: 5px 5px;
-                padding: 5px;
-                font-size: 14px;
-                border: 1px solid #ccc;
-                border-radius: 10px;
-                margin-bottom: 1em;
-            }
-
-            a{
-                color: #008232;
-            }
-        }
-
-    </style>
-
+<span id="login-form">
 
 <h1>Se connecter</h1>
 
@@ -111,6 +35,7 @@
         </form>
     </div>
 </div>
+</span>
 @endsection
 
 <!-- Kennan -->
